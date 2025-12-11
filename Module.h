@@ -1,17 +1,16 @@
 #ifndef MODULE_H
 #define MODULE_H
-#include <string>
+#include <iostream>
 using namespace std;
 
-namespace Mod{
-    class Module{
-        public:
+    class Module {
+    public:
 
         Module();
         Module(unsigned int);
-        Module(unsigned int,unsigned int, string);
+        Module(unsigned int, unsigned int, string);
         Module(string);
-        Module(Module& module): _credits(module.getCredits()),_students(module.getStudents()),_name(module.getMName()){}
+        Module(Module& module) : _credits(module.getCredits()), _students(module.getStudents()), _name(module.getMName()) {}
 
         void setCredits(unsigned int);
         unsigned int getCredits();
@@ -23,12 +22,12 @@ namespace Mod{
         string getMName();
 
 
-        private:
+    private:
         unsigned int _credits;
         unsigned int _students;
         string _name;
     };
-}
+
 
 
 

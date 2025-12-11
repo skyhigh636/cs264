@@ -1,26 +1,25 @@
 #ifndef PLACEMENT_H
 #define PLACEMENT_H
-#include <string>
-#pragma once;
+#include <iostream>
+#pragma once
 using namespace std;
 
 
-namespace Modplacement{
-    class Placement{
+    class Placement {
 
-        public: 
+    public:
         Placement();
-        Placement(Placement& placement):_description(placement.getDescript()){}
+        Placement(Placement& placement) :_description(placement.getDescript()) {}
         void setDescript(string);
         string getDescript();
-    
-        protected:
+
+    protected:
         string getDescript(string);
 
-        private:
+    private:
         string _description;
 
         Placement(string description);
     };
-}
+
 #endif

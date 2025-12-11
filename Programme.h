@@ -1,18 +1,16 @@
 #ifndef PROGRAMME_H
 #define PROGRAMME_H
-#include <string>
+#include <iostream>
 using namespace std;
 #include "Module.h"
-using namespace Mod;
 
-namespace Prog{
-    class Programme{
-        public:
+    class Programme {
+    public:
         Programme();
         Programme(string);
         Programme(unsigned int);
         Programme(string, unsigned int);
-        Programme(Programme& programme):_name(programme.getName()),_year(programme.getYear()){}
+        Programme(Programme& programme) :_name(programme.getName()), _year(programme.getYear()) {}
 
         void setName(string);
         string getName();
@@ -20,21 +18,20 @@ namespace Prog{
         void setYear(unsigned int);
         unsigned int getYear();
 
-		virtual string toString();
 
 
-        protected:
+    protected:
         void addModule(Module*);
         Module setStudents(unsigned int);
         Module setMName(string);
         Module setCredits(unsigned int);
 
-        private:
+    private:
         string _name;
         unsigned int _year;
-        
+
     };
-}
+
 
 
 
